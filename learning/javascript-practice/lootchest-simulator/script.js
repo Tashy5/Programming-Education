@@ -7,12 +7,17 @@ let lootTable = [
 ];
 
 function openChest() {
-    let randomNumber = Math.floor(Math.random() * lootTable.length);
-    let item = lootTable[randomNumber].name;
-    totalLootValue = totalLootValue + lootTable[randomNumber].value;
+    console.log('You Received:')
+    let itemChance = Math.floor(Math.random() * 5) + 1;
 
-    console.log(item);
-    console.log(totalLootValue);
-}
+        for(let itemAmmount = 0; itemAmmount<itemChance; itemAmmount++){
 
+            let randomNumber = Math.floor(Math.random() * lootTable.length);
+            let item = lootTable[randomNumber].name;
+            totalLootValue = totalLootValue + lootTable[randomNumber].value;
+            console.log(item);
+        };
+    console.log('Total Value: ' + totalLootValue);
+};
 openChest();
+
