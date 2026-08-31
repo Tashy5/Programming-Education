@@ -8,8 +8,11 @@ let lootTable = [
 
 function openChest() {
     let randomNumber = Math.floor(Math.random() * lootTable.length);
+    let item = lootTable[randomNumber].name;
+    totalLootValue = totalLootValue + lootTable[randomNumber].value;
 
-    console.log(randomNumber);
+    console.log(item);
+    console.log(totalLootValue);
 }
 
 openChest();
