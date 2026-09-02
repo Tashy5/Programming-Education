@@ -1,0 +1,46 @@
+const tiger = {
+    species: "Tiger",
+    age: 5,
+    isEndangered: true
+};
+
+const elephant = {
+    species: "Elephant",
+    age: 10,
+    isEndangered: true
+};
+
+function getSpecies(animal) {
+    return animal.species;
+}
+
+function getAge(animal) {
+    return animal.age;
+}
+
+
+function addHabitat(animal, habitat) {
+    animal.habitat = habitat;
+    return animal;
+}
+
+function updateAge(animal, newAge) {
+    animal.age = newAge;
+    return animal;
+}
+
+function removeEndangeredStatus(animal) {
+    delete animal.isEndangered;
+    return animal;
+}
+
+function hasHabitat(animal) {
+    return animal.hasOwnProperty("habitat");
+}
+
+function getProperty(animal, propertyName) {
+    return (animal[propertyName]);
+}
+console.log(getProperty(tiger, "species"));
+console.log(getProperty(elephant, "age"));
+
