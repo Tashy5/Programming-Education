@@ -1,3 +1,11 @@
+let cargo = {
+    containerId: 5,
+    destination: "London",
+    weight: 250,
+    unit: "lb",
+    hazmat: true
+}
+
 function normalizeUnits(manifest) {
     let normalizedManifest = {
         containerId: manifest.containerId,
@@ -58,3 +66,5 @@ function processManifest(manifest) {
     }
 }
 
+console.log(cargo)
+console.log(processManifest(cargo))

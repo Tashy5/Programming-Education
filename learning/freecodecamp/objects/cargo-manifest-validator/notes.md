@@ -6,3 +6,5 @@
 
 ## Things to work on
 - object.keys({})
+- What is NaN
+- What is .trim() === ()
