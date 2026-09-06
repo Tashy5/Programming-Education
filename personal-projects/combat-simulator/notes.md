@@ -22,4 +22,8 @@ I started by creating two objects, a player and an enemy. This would be the obje
 
 I wanted to just get the base attack function down today. So I made the program able to run through a sequence which would affect the entitys health if attack and also use a Math.random number function to decide if the enemies attack lands or not.
 
-#### To improve
+### Day 2
+#### Tasks
+- Make a defence stat
+    - The defence stat needs to create a ratio/percentage based change to the incoming damage
+    - Create the formula reduction = ( Defence / (Defence + 100))
