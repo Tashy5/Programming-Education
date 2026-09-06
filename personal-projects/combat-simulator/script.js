@@ -5,7 +5,6 @@ let player = {
         defence: 1000
     }
 }
-
 let enemy = {
     stats: {
         health: 12,
@@ -13,7 +12,6 @@ let enemy = {
         defence: 10
     }
 }
-
 function atkEnemy() {
     let num = Math.floor(Math.random() * 100)
 
@@ -28,11 +26,9 @@ function atkEnemy() {
     
     randomEnemyChoice()
 }
-
 function displayStats(character) {
     return character.stats;
 }
-
 function randomEnemyChoice() {
     let num = Math.floor(Math.random() * 100);
 
@@ -45,10 +41,9 @@ function randomEnemyChoice() {
         console.log(`Enemies Attack Missed`)
     }
 }
-
-function defenceDamageReduction(player,enemy) {
-    let reduction = enemy.stats.defence / (enemy.stats.defence + 100)
-    let damageReturn = Math.floor(player.stats.atk * (1 - reduction))
+function defenceDamageReduction(attacker,defender) {
+    let reduction = defender.stats.defence / (defender.stats.defence + 100)
+    let damageReturn = Math.floor(attacker.stats.atk * (1 - reduction))
     if (damageReturn === 0) {
         console.log(`Attack Blocked!`)
         return damageReturn;
@@ -56,7 +51,5 @@ function defenceDamageReduction(player,enemy) {
         return damageReturn;  
     } 
 }
-
-
-
 atkEnemy()
+

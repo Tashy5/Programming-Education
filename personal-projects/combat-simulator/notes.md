@@ -25,5 +25,16 @@ I wanted to just get the base attack function down today. So I made the program 
 ### Day 2
 #### Tasks
 - Make a defence stat
-    - The defence stat needs to create a ratio/percentage based change to the incoming damage
-    - Create the formula reduction = ( Defence / (Defence + 100))
+    - The defence stat needs to create a ratio/percentage based change to the incoming damage [x]
+    - Create the formula reduction = ( Defence / (Defence + 100)) [x]
+- Redesign the entire codebase. Have:
+    - playerTurn()
+        - checkHit()
+        - calculateDamage()
+        - applyDamage()
+        - displayResult()
+    - enemyTurn()
+        - checkHit()
+        - calculateDamage()
+        - applyDamage()
+        - displayResult()
