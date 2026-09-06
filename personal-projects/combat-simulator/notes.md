@@ -29,12 +29,13 @@ I wanted to just get the base attack function down today. So I made the program 
     - Create the formula reduction = ( Defence / (Defence + 100)) [x]
 - Redesign the entire codebase. Have:
     - playerTurn()
-        - checkHit()
+        - checkHit() [x]
         - calculateDamage()
         - applyDamage()
         - displayResult()
     - enemyTurn()
-        - checkHit()
+        - checkHit() [x]
         - calculateDamage()
         - applyDamage()
         - displayResult()
+    -randomNumber() [x]

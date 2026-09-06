@@ -2,16 +2,57 @@ let player = {
     stats: {
         health: 20,
         atk: 10,
-        defence: 1000
+        defence: 1000,
+        evasiveness: 20
     }
 }
 let enemy = {
     stats: {
         health: 12,
         atk: 5,
-        defence: 10
+        defence: 10,
+        evasiveness: 5
     }
 }
+
+function playerTurn() {
+
+}
+
+function enemyTurn() {
+
+}
+
+function checkEvasion(character) {
+    let evasion = character.stats.evasiveness
+    let roll = randomNumber()
+    if (roll <= evasion) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function calculateDamage() {
+
+}
+
+function applyDamage() {
+
+}
+
+function displayResult() {
+
+}
+
+function randomNumber() {
+    let num = Math.floor(Math.random() * 100) + 1
+    return num;
+}
+
+
+
+//Old Code Below
 function atkEnemy() {
     let num = Math.floor(Math.random() * 100)
 
