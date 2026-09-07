@@ -37,7 +37,7 @@ function runSequence(config,cycles) {
     } else if (config.fault === true) {
         console.log("Faulted phase!");
         return;
-    }
+    };
 
     for (let i = 0; i < cycles; i++) {
         for (let phases of config.phases) {
@@ -48,16 +48,21 @@ function runSequence(config,cycles) {
             }
         }
     }
-}
-runSequence(config1,2)
-
-
-// Record the cumulative elapsed time after each phase across the cycles into an array, adding each phase's duration to the running total as you iterate.
-//Process all faulted and invalid phases without validation, even if config.fault is true or duration <= 0.
-//Return the array of cumulative timestamps.
-//For example, generateTimeline(config1, 1) should return the array [5, 7, 11].
-
+};
 
 function generateTimeline(config,cycles) {
 
-}
+let elapsedTime =0;
+let array =[];
+
+for (let i = 0; i < cycles; i++) {
+  for (let phase of config.phases) {
+    elapsedTime += phase.duration;
+    array.push(elapsedTime);
+  }
+};
+return array;
+};
+
+runSequence(config1,1)
+generateTimeline(config1,2)
