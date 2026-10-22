@@ -1,3 +1,4 @@
+/*main */
 body {
     margin: 0;
     background-color: #1c1c1c;
@@ -12,6 +13,9 @@ h1 {
     display:flex;
     min-height: 100vh;
 }
+
+
+/*sidebar*/
 .sidebar {
     width: 220px;
     flex-shrink: 0;
@@ -35,6 +39,8 @@ h1 {
     background-color: #293a30;
     color: #8fd3a8
 }
+
+/*main content*/
 .main-content {
     flex: 1;
     padding: 30px;
@@ -84,4 +90,46 @@ h1 {
     font-size: 10px;
     letter-spacing: 2px;
     color: #aaaaaa;
+}
+
+
+.show-card {
+    margin-top: 20px;
+}
+.show-artwork {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: linear-gradient(135deg, #35483b, #171717);
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: #8fd3a8;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    max-width: 900px;
+}
+.show-info {
+    margin-top: 20px;
+    max-width: 900px;
+}
+.show-info h3 {
+    font-size: 28px;
+    margin: 0 0 8px;
+}
+.episode-info {
+    color: #8fd3a8;
+    font-weight:bold;
+    margin: 0 0 6px;
+}
+.episode-title {
+    color: #aaaaaa;
+    font-style: italic;
+    margin: 0 0 16px;
+}
+.show-description {
+    color: #cccccc;
+    line-height: 1.6;
+    max-width: 800px;
 }
