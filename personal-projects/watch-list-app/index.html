@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
     <title>Loofa</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,13 +13,14 @@
             <h2>|||</h2>
 
             <nav>
-                <a href="#" class="active">Home</a>
-                <a href="#">Watch Lists</a>
-                <a href="#">Rankings</a>
+                <a href="#" id="home-link" class="active">Home</a>
+                <a href="#" id="watchlists-link">Watch Lists</a>
+                <a href="#" id="rankings-link">Rankings</a>
             </nav>
         </aside>
 
         <main class="main-content">
+            <section id="home-page" class="page-section">
             <h1>Welcome to Loofa</h1>
 
             <section class="countdown">
@@ -68,9 +69,78 @@
                     </div>
                 </div>
             </section>
+        </section>
+        
+
+        <section id="watchlists-page" class="page-section">
+            <h1>Watch Lists</h1>
+
+            <div class="watchlist-grid">
+                <div class="watchlist-card">
+                    <div class="watchlist-progress">
+                        <div class="watchlist-progress-fill" style="width: 65%;"></div>
+                    </div>
+                    <h3>Weekend</h3>
+                    <p>4 titles</p>
+                </div>
+
+                <div class="watchlist-card" id="marvel-card">
+                    <div class="watchlist-progress">
+                        <div class="watchlist-progress-fill" style="width: 30%;"></div>
+                    </div>
+                    <h3>Marvel Marathon</h3>
+                    <p>12 titles</p>
+                </div>
+
+                <button class="create-watchlist">
+                    + Create Watch List
+                </button>
+            </div>
+        </section>
+
+        <div class="modal-overlay">
+            <div class="modal-window">
+                <button class="modal-close" aria-label="Close popup">&times</button>
+
+                <h2>Create Watchlist</h2>
+                <p>Give your new watch list a name.</p>
+
+                <label for="watchlist-name">Watch List Name</label>
+                <input 
+                    type="text"
+                    id="watchlist-name"
+                    placeholder="e.g. Marvel Marathon"
+                >
+
+                <div class="watchlist-items">
+                    <!-- Added titles here-->
+                </div>
+
+                <div class="modal-actions">
+                    <button class="modal-cancel">Cancel</button>
+                    <button class="modal-create">Create Watchlist</button>
+                </div>
+            </div>
+        </div>
+
+        <section id="watchlist-detail-page" class="page-section">
+            <a href="#" id="back-to-watchlists">← Back to Watch Lists</a>
+
+            <h1>Marvel Marathon</h1>
+            <p>12 titles</p>
+
+            <div class="watchlist-progress">
+                <div class="watchlist-progress-fill" style="width: 30%;"></div>
+            </div>
+        </section>
 
 
-            
+
+        <section id="rankings-page" class="page-section">
+            <h1>Rankings</h1>
+            <p>Your personal movie and TV rankings will appear here.</p>
+        </section>
+
         </main>
 
     </div>
