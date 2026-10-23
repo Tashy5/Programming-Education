@@ -36,3 +36,19 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+//API connection
+const apiKey = "Placeholder";
+
+const url = `https://api.themoviedb.org/3/search/tv?query=Loki&api_key=${apiKey}`;
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const show = data.results[0];
+
+        document.getElementById("show-title").textContent = show.name;
+        document.getElementById("show-description").textContent = show.overview;
+        document.getElementById("show-poster").src =
+        `https://image.tmdb.org/t/p/w780${show.poster_path}`;
+    })
